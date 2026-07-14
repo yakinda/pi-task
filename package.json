@@ -1,0 +1,51 @@
+{
+  "name": "pi-task",
+  "version": "0.3.0",
+  "description": "OpenCode-inspired foreground subagent task tool for pi",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "subagent",
+    "task"
+  ],
+  "files": [
+    "index.ts",
+    "src/**/*.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "pack:dry": "npm pack --dry-run",
+    "pack:smoke": "node scripts/package-smoke.mjs"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.80.6",
+    "@earendil-works/pi-tui": "^0.80.6",
+    "@types/node": "^24.12.4",
+    "typebox": "^1.1.38",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.9"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}
